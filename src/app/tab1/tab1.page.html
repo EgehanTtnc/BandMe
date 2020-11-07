@@ -1,0 +1,59 @@
+<ion-header style="backdrop-filter: blur(8px);" [translucent]="true">
+  <ion-toolbar>
+    <ion-title color="primary">
+      Akış
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+  <ion-segment [(ngModel)]="category">
+    <ion-segment-button value="genel">
+      Genel
+    </ion-segment-button>
+    <ion-segment-button value="takip">
+      Takip
+    </ion-segment-button>
+  </ion-segment>
+
+  <ion-card *ngFor="let card of cards">
+    <ion-item >
+      <ion-avatar class="ion-margin-right">
+        <img
+          src="https://i1.sndcdn.com/avatars-000054746463-huyh6y-t500x500.jpg"
+        />
+      </ion-avatar>
+      <h3 style="padding-left: 10px; padding-bottom: 8px;">Egehan Tütüncü</h3>
+    </ion-item>
+
+    <img
+      src="https://consequenceofsound.net/wp-content/uploads/2020/04/Linkin-Park.jpg?quality=80"
+    />
+
+    <ion-card-content>
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      Lorem Ipsum has been the industry's standard dummy text ever since the
+      1500s.
+    </ion-card-content>
+
+    <ion-row>
+      <ion-col>
+        <ion-button color="medium">
+          <ion-icon name="thumbs-up"></ion-icon>
+          <ion-label style="padding-left: 4px;">12 Likes</ion-label>
+        </ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button color="medium">
+          <ion-icon name="chatbubble-ellipses"></ion-icon>
+          <ion-label style="padding-left: 4px;">4 comments</ion-label>
+        </ion-button>
+      </ion-col>
+      <ion-col center text-center>
+        <ion-note>
+          11h ago
+        </ion-note>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+</ion-content>

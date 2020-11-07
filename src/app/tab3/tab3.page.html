@@ -1,0 +1,80 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title style="color: #00f829a9;">
+      Profil
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-grid style="height: 100%;">
+    <ion-row>
+      <ion-col size="12" size-sm="8" offset-sm="2" class="text-center">
+        <ion-card>
+          <ion-item-group>
+            <ion-row class="ion-padding-bottom">
+              <ion-avatar style="height: 80px; width: 80px;">
+                <img
+                  class="ion-margin"
+                  src="https://i1.sndcdn.com/avatars-000054746463-huyh6y-t500x500.jpg"
+                />
+              </ion-avatar>
+              <ion-label
+                style="
+                  color: #00f829a9;
+                  margin-top: 24px;
+                  margin-left: 24px;
+                  padding-bottom: 10px;
+                  margin-right: auto;
+                "
+              >
+                <h1>Egehan Tütüncü</h1>
+                <p style="padding-top: 8px;">Grup Adı</p>
+              </ion-label>
+            </ion-row>
+
+            <ion-button
+              slot="end"
+              fill="clear"
+              expand="block"
+              [routerLink]="'./edit-profile'"
+              style="width: 99%; margin-left: auto; padding-top: 0; border-radius: 15px;"
+              >Profili Düzenle</ion-button
+            >
+          </ion-item-group>
+        </ion-card>
+        <ion-card>
+          <ion-item lines="full">
+            <ion-icon style="color: #00f829a9;" name="musical-notes"></ion-icon>
+            <ion-label>
+              <p>Enstrüman:</p>
+            </ion-label>
+          </ion-item>
+          <ion-item lines="full">
+            <ion-icon style="color: #00f829a9;" name="man"></ion-icon>
+            <ion-label>
+              <p>Yaş:</p>
+            </ion-label>
+          </ion-item>
+          <ion-item lines="full">
+            <ion-icon style="color: #00f829a9;" name="people-circle"></ion-icon>
+            <ion-label>
+              <p>Cinsiyet:</p>
+            </ion-label>
+          </ion-item>
+          <ion-item lines="full">
+            <ion-icon style="color: #00f829a9;" name="business"></ion-icon>
+            <ion-label>
+              <p>Şehir:</p>
+            </ion-label>
+          </ion-item>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item-group> </ion-item-group>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

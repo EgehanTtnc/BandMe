@@ -1,0 +1,87 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/tab3"> </ion-back-button>
+    </ion-buttons>
+    <ion-title style="color: #00f829a9">Profili Düzenle</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="form">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="12" size-sm="8" offset-sm="2" class="ion-text-center">
+          <ion-card style="border-radius: 20px;">
+            <ion-card-header style="background-color: #00f829a9;" translucent="true" color="primary">
+              Bilgileri Düzenle
+            </ion-card-header>
+            <div class="container">
+              <ion-avatar
+                (click)="imagePicked()"
+                style="
+                  height: 80px;
+                  width: 80px;
+                  align-content: center;
+                  margin-right: auto;
+                  margin-left: auto;
+                  display: block;
+                  margin-top: 10px;
+                  opacity: 0.5;
+                "
+              >
+                <ion-icon size="large" class="btn" name="camera-outline"></ion-icon>
+                <img
+                  src="https://i1.sndcdn.com/avatars-000054746463-huyh6y-t500x500.jpg"
+                />
+              </ion-avatar>
+            </div>
+
+            <ion-card-content>
+              <ion-item lines="full">
+                <ion-input
+                  required="true"
+                  autocapitalize="on"
+                  placeholder="İsim"
+                  type="text"
+                >
+                </ion-input>
+              </ion-item>
+              <ion-item lines="full">
+                <ion-input autocapitalize="on" placeholder="Soyisim" type="text" formControlName="surname">
+                </ion-input>
+              </ion-item>
+              <ion-item lines="full">
+                <ion-input placeholder="Yaş" type="numeric" formControlName="age"> </ion-input>
+              </ion-item>
+              <ion-item lines="full">
+                <ion-input autocapitalize placeholder="Cinsiyet" type="text" formControlName="gender">
+                </ion-input>
+              </ion-item>
+              <ion-item lines="full">
+                <ion-input autocapitalize placeholder="Şehir" type="text" formControlName="city">
+                </ion-input>
+              </ion-item>
+            </ion-card-content>
+            <ion-list class="ion-padding-top">
+              <ion-label> Enstrüman Seç </ion-label>
+              <ion-item
+                style="max-height: min-content"
+                *ngFor="let entry of checkForm"
+              >
+                <ion-label>{{entry.val}}</ion-label>
+                <ion-checkbox
+                  slot="end"
+                  [(ngModel)]="entry.isChecked"
+                  formControlName="instrument"
+                  name="checkbox"
+                ></ion-checkbox>
+              </ion-item>
+              <ion-button> Kaydet </ion-button>
+            </ion-list>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+</ion-content>

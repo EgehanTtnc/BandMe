@@ -1,0 +1,7 @@
+{
+  "name": "band-me",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
